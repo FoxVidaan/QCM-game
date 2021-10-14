@@ -191,7 +191,6 @@ for (let button of reponsesBtn) {
         if (nbQuestions < questions.length) {
             if (button.id === questions[nbQuestions].reponseValide) {
                 score++;
-                console.log(score)
             }
         }
         nbQuestions++;
