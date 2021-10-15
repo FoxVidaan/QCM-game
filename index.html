@@ -9,16 +9,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app">
-        <span class="nbQuestions"></span>
-        <p class="question"></p>
-        <div class="button">
-            <button id="a" class="reponse"></button>
-            <button id="b" class="reponse"></button>
-            <button id="c" class="reponse"></button>
-            <button id="d" class="reponse"></button>
-        </div>
+<button id="openModal">Ajouter</button>
+<div class="modal">
+    <span id="closeModal">X</span>
+    <p>Ajouter une question</p>
+    <input type="text" id="questionTitle" placeholder="titre">
+    <input type="text" id="choixA" placeholder="choixA">
+    <input type="text" id="choixB" placeholder="choixB">
+    <input type="text" id="choixC" placeholder="choixC">
+    <input type="text" id="choixD" placeholder="choixD">
+    <input type="text" placeholder="Lettre de la bonne réponse">
+    <input type="button" value="Ajouter">
+</div>
+<div class="app">
+    <span class="nbQuestions"></span>
+    <p class="question"></p>
+    <div class="button">
+        <button id="a" class="reponse"></button>
+        <button id="b" class="reponse"></button>
+        <button id="c" class="reponse"></button>
+        <button id="d" class="reponse"></button>
     </div>
+</div>
 </body>
 <script src="script.js"></script>
 </html>

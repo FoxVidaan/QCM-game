@@ -9,6 +9,49 @@ body {
     padding: 0;
 }
 
+#openModal {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    min-width: 300px;
+    border: #6f84ff solid 2px;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 2;
+}
+
+.modal.open {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 10px;
+}
+
+.modal span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.modal p {
+    flex: 100%;
+
+}
+
+.modal input {
+    padding: 5px 16px;
+    flex: calc(50% - 10px);
+    min-width: 100px;
+}
+
 .app {
     padding: 20px;
     width: calc(100vw - 40px);

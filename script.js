@@ -241,3 +241,42 @@ function jugement() {
         return "Vous êtes une personne parfaitement respectable !";
     }
 }
+
+let openModalBtn = document.querySelector("#openModal");
+openModalBtn.addEventListener('click', openModal);
+function openModal () {
+    let modal = document.querySelector(".modal");
+    modal.classList.add("open");
+}
+let closeModalBtn = document.querySelector("#closeModal");
+closeModalBtn.addEventListener('click', closeModal);
+function closeModal () {
+    let modal = document.querySelector(".modal");
+    modal.classList.remove("open");
+}
+
+let btn = document.querySelector(".modal input:last-child");
+btn.addEventListener("click", addQuestion);
+
+function addQuestion () {
+    let input = document.querySelectorAll(".modal input");
+
+    let newQuestion = {
+        'libelle': input[0].value,
+        'reponses': {
+            'a': input[1].value,
+            'b': input[2].value,
+            'c': input[3].value,
+            'd': input[4].value,
+        },
+        'reponseValide': input[5].value.toLowerCase()
+    };
+
+    questions.push(newQuestion);
+
+    for (let i of input) {
+        i.value = "";
+    }
+
+    quizBuild();
+}
