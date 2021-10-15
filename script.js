@@ -281,6 +281,7 @@ function addQuestion () {
     btn.style.backgroundColor = "#6f84ff";
     setInterval(() => {
         btn.style.backgroundColor = "white";
+        btn.value = "Ajouter";
     }, 1000);
     quizBuild();
 }
