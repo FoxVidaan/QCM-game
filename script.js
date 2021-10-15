@@ -277,6 +277,10 @@ function addQuestion () {
     for (let i of input) {
         i.value = "";
     }
-
+    btn.value = "Valider";
+    btn.style.backgroundColor = "#6f84ff";
+    setInterval(() => {
+        btn.style.backgroundColor = "white";
+    }, 1000);
     quizBuild();
 }
